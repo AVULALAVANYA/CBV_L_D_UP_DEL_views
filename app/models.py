@@ -10,7 +10,7 @@ class School(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('School',kwargs={'pk':self.pk})
+        return reverse('SchoolDetail',kwargs={'pk':self.pk})
 
 class students(models.Model):
     school=models.ForeignKey(School, on_delete=models.CASCADE,related_name='students')

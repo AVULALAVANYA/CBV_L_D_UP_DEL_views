@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block body_block %}
+<h1> you conform to Delete{{schoolobject.name}}</h1>
 
 <form method="POST">
     {% csrf_token %}
@@ -13,4 +14,10 @@
 
 </form>
 <a href="{% url 'SchoolList' %}">No-go-back</a>
+<a href="{% url 'SchoolDetail' pk=schoolobject.pk %}">go_back_to_List</a>
+
+
+
+
+
 {% endblock %}
